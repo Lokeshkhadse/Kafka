@@ -1,0 +1,53 @@
+server:
+  port: 1009
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+
+
+    # Consumer groups for different regions and cities
+    group:
+      maharashtra:
+        group-id: consumer-group-maharashtra
+      andhra-pradesh:
+        group-id: consumer-group-andhra-pradesh
+      madhya-pradesh:
+        group-id: consumer-group-madhya-pradesh
+      uttar-pradesh:
+        group-id: consumer-group-uttar-pradesh
+
+      # Cities under Maharashtra
+      mumbai:
+        group-id: consumer-group-mumbai
+      pune:
+        group-id: consumer-group-pune
+      nagpur:
+        group-id: consumer-group-nagpur
+
+      # Cities under Andhra Pradesh
+      vijayawada:
+        group-id: consumer-group-vijayawada
+      visakhapatnam:
+        group-id: consumer-group-visakhapatnam
+      guntur:
+        group-id: consumer-group-guntur
+
+      # Cities under Madhya Pradesh
+      bhopal:
+        group-id: consumer-group-bhopal
+      indore:
+        group-id: consumer-group-indore
+      gwalior:
+        group-id: consumer-group-gwalior
+
+      # Cities under Uttar Pradesh
+      lucknow:
+        group-id: consumer-group-lucknow
+      kanpur:
+        group-id: consumer-group-kanpur
+      varanasi:
+        group-id: consumer-group-varanasi
